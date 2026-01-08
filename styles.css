@@ -11,7 +11,6 @@
   --accent: #f28a2a;
   --accent2: #ff9d44;
 
-  --radius: 18px;
   --shadow: 0 22px 70px rgba(0,0,0,.45);
 
   --max: 760px;
@@ -20,6 +19,12 @@
   /* ajustes finos */
   --logo-h: 42px;
   --avatar: 120px;
+
+  /* botões menores */
+  --btn-pad-y: 9px;
+  --btn-pad-x: 14px;
+  --btn-title: 13px;
+  --btn-sub: 11.5px;
 }
 
 *{ box-sizing:border-box; }
@@ -54,6 +59,9 @@ body{
 
 .brand__logo{
   height: var(--logo-h);
+  width:auto;
+  display:block;
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.35));
 }
 
 /* card */
@@ -64,7 +72,7 @@ body{
   border: 1px solid var(--stroke);
   background: linear-gradient(180deg, var(--panel), var(--panel2));
   box-shadow: var(--shadow);
-  padding: 44px 26px 28px;
+  padding: 44px 26px 24px;
 }
 
 /* avatar */
@@ -95,8 +103,8 @@ body{
 
 .subtitle{
   text-align:center;
-  max-width: 520px;
-  margin: 0 auto 34px;
+  max-width: 560px;
+  margin: 0 auto 28px;
   color: var(--muted);
   line-height: 1.7;
   font-size: 14px;
@@ -106,42 +114,55 @@ body{
 .buttons{
   display:flex;
   flex-direction: column;
-  gap: 16px;              /* MAIS espaço entre botões */
-  margin-top: 18px;       /* distância do texto acima */
+  gap: 14px;
+  margin-top: 10px;
 }
 
 .btn{
-  padding: 10px 14px;     /* botões menores */
+  padding: var(--btn-pad-y) var(--btn-pad-x);
   border-radius: 14px;
   border: 1px solid rgba(242,138,42,.35);
   background: rgba(242,138,42,.10);
   text-align:center;
   text-decoration:none;
   color: var(--text);
-  transition: transform .12s ease, background .12s ease;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
 }
 
 .btn:hover{
   transform: translateY(-1px);
   background: rgba(255,157,68,.14);
+  border-color: rgba(255,157,68,.55);
 }
 
 .btn__title{
   font-weight: 600;
-  font-size: 14px;
+  font-size: var(--btn-title);
 }
 
 .btn__sub{
   margin-top: 4px;
-  font-size: 12px;
+  font-size: var(--btn-sub);
   color: rgba(255,255,255,.68);
 }
 
-/* rodapé */
+/* rodapé do card */
 .foot{
-  margin-top: 36px;
-  padding-top: 18px;
+  margin-top: 34px;
+  padding-top: 16px;
   border-top: 1px solid rgba(255,255,255,.08);
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.foot__logo{
+  height: 26px;   /* logo menor no rodapé */
+  width: auto;
+  display:block;
+  opacity: .9;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.35));
 }
 
 .muted{
@@ -151,11 +172,12 @@ body{
 
 /* mobile */
 @media (max-width: 480px){
-  .card{
-    padding: 36px 20px 26px;
-  }
+  .card{ padding: 36px 20px 22px; }
   :root{
     --avatar: 110px;
     --logo-h: 36px;
+    --btn-pad-y: 9px;
+    --btn-pad-x: 12px;
   }
+  .foot__logo{ height: 22px; }
 }
