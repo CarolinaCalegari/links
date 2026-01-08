@@ -2,27 +2,25 @@ const LINKS = [
   {
     title: "WhatsApp",
     sub: "(41) 99748-9119",
-    url: "https://wa.me/5541997489119",
+    url: "https://wa.me/5541997489119"
   },
   {
     title: "Instagram",
     sub: "www.instagram.com/dracarolcalegari",
-    url: "https://www.instagram.com/dracarolcalegari",
+    url: "https://www.instagram.com/dracarolcalegari"
   },
   {
     title: "Site",
     sub: "www.carolinacalegari.com.br",
-    url: "https://www.carolinacalegari.com.br",
+    url: "https://www.carolinacalegari.com.br"
   }
 ];
 
 function render() {
   const wrap = document.getElementById("buttons");
-  if (!wrap) return;
-
   wrap.innerHTML = "";
 
-  for (const item of LINKS) {
+  LINKS.forEach(item => {
     const a = document.createElement("a");
     a.className = "btn";
     a.href = item.url;
@@ -35,7 +33,7 @@ function render() {
     `;
 
     wrap.appendChild(a);
-  }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", render);
