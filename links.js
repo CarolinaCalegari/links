@@ -1,5 +1,5 @@
 const PHONE_DISPLAY = "(41) 99748-9119";
-const PHONE_WA = "5541997489119"; // 55 + DDD + número
+const PHONE_WA = "5541997489119"; // 55 + DDD + número, sem espaços
 
 const LINKS = [
   {
@@ -22,9 +22,11 @@ const LINKS = [
 
 function render() {
   const wrap = document.getElementById("buttons");
+  if (!wrap) return;
+
   wrap.innerHTML = "";
 
-  LINKS.forEach(item => {
+  for (const item of LINKS) {
     const a = document.createElement("a");
     a.className = `btn ${item.primary ? "btn--primary" : ""}`;
     a.href = item.url;
@@ -37,7 +39,7 @@ function render() {
     `;
 
     wrap.appendChild(a);
-  });
+  }
 
   const top = document.getElementById("topWhatsapp");
   if (top) top.href = LINKS[0].url;
