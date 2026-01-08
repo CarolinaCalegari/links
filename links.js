@@ -13,11 +13,18 @@ const LINKS = [
     title: "Site",
     sub: "www.carolinacalegari.com.br",
     url: "https://www.carolinacalegari.com.br"
+  },
+  {
+    title: "Avaliações do Google",
+    sub: "Ver avaliações e comentários",
+    url: "https://www.google.com.br/search?ibp=gwp;0,7&q=Dra.+Carolina+Calegari+-+Cirurgia+Bucomaxilofacial&ludocid=9079432214454943883&lsig=AB86z5U9knnAB1bVuK4ROpdxYHtO#lkt=LocalPoiReviews&lpg=cid:CgIgAQ%3D%3D"
   }
 ];
 
 function render() {
   const wrap = document.getElementById("buttons");
+  if (!wrap) return;
+
   wrap.innerHTML = "";
 
   LINKS.forEach(item => {
