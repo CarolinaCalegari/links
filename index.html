@@ -7,7 +7,6 @@
   <title>Carolina Calegari | Contato</title>
   <meta name="description" content="Links oficiais: WhatsApp, Instagram e site." />
 
-  <!-- Blindado para subdomínio e subpasta (ex.: /links/) -->
   <base href="./">
 
   <link rel="icon" href="assets/favicon.png" />
@@ -21,34 +20,25 @@
 
 <body>
   <main class="wrap">
-    <header class="top" aria-label="Topo">
-      <a class="brand" href="https://www.carolinacalegari.com.br" target="_blank" rel="noopener" aria-label="Abrir site principal">
-        <img
-          src="assets/logo.png"
-          alt="Carolina Calegari"
-          class="brand__logo"
-          loading="eager"
-          decoding="async"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';"
-        />
-        <span class="brand__fallback" style="display:none;">
-          <span class="brand__primary">CAROLINA</span>
-          <span class="brand__secondary">CALEGARI</span>
-        </span>
+    <header class="top">
+      <a class="brand" href="https://www.carolinacalegari.com.br" target="_blank" rel="noopener">
+        <img src="assets/logo.png" alt="Carolina Calegari" class="brand__logo" />
       </a>
     </header>
 
-    <section class="card" aria-label="Contato">
+    <section class="card">
       <div class="avatar">
-        <img src="assets/avatar.jpg" alt="Carolina Calegari" loading="eager" decoding="async" />
+        <img src="assets/avatar.jpg" alt="Carolina Calegari" />
       </div>
 
       <h1 class="title">Contato</h1>
-      <p class="subtitle">Acesse os canais oficiais para agendamento e informações.</p>
+      <p class="subtitle">
+        Acesse os canais oficiais para agendamento e informações.
+      </p>
 
-      <div class="buttons" id="buttons" aria-label="Links"></div>
+      <div class="buttons" id="buttons"></div>
 
-      <footer class="foot" aria-label="Rodapé">
+      <footer class="foot">
         <span class="muted">© <span id="year"></span> Carolina Calegari</span>
       </footer>
     </section>
