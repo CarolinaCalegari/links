@@ -16,12 +16,13 @@
   --max: 760px;
   --font: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 
-  /* ajustes finos */
+  /* avatar */
   --avatar: 120px;
 
-  /* botões menores */
-  --btn-pad-y: 9px;
-  --btn-pad-x: 14px;
+  /* botões */
+  --btn-width: 520px;        /* 👈 largura ideal (ajuste fino aqui) */
+  --btn-pad-y: 10px;
+  --btn-pad-x: 16px;
   --btn-title: 13px;
   --btn-sub: 11.5px;
 }
@@ -44,7 +45,6 @@ body{
   display:flex;
   flex-direction: column;
   align-items:center;
-  /* antes tinha espaço extra por causa da logo no topo */
   padding: 42px 16px 56px;
 }
 
@@ -98,11 +98,14 @@ body{
 .buttons{
   display:flex;
   flex-direction: column;
-  gap: 14px;
-  margin-top: 10px;
+  gap: 16px;
+  margin-top: 6px;
 }
 
 .btn{
+  width: 100%;
+  max-width: var(--btn-width); /* 👈 controla a largura real */
+  margin: 0 auto;              /* centraliza */
   padding: var(--btn-pad-y) var(--btn-pad-x);
   border-radius: 14px;
   border: 1px solid rgba(242,138,42,.35);
@@ -130,7 +133,7 @@ body{
   color: rgba(255,255,255,.68);
 }
 
-/* rodapé do card */
+/* rodapé */
 .foot{
   margin-top: 34px;
   padding-top: 16px;
@@ -155,14 +158,15 @@ body{
 }
 
 /* mobile */
-@media (max-width: 480px){
-  .card{ padding: 36px 20px 22px; }
+@media (max-width: 600px){
   :root{
+    --btn-width: 100%;   /* em mobile volta a ocupar tudo */
     --avatar: 110px;
-    --btn-pad-x: 12px;
   }
-  .foot{
-    gap: 10px;
+  .card{
+    padding: 36px 20px 22px;
   }
-  .foot__logo{ height: 22px; }
+  .foot__logo{
+    height: 22px;
+  }
 }
