@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Carolina Calegari | Contato</title>
+  <meta name="description" content="Links oficiais: WhatsApp, Instagram e site." />
+
+  <!-- FUNDAMENTAL para funcionar em /contato -->
+  <base href="./">
+
+  <link rel="icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div class="brand">
+        <span class="brand__primary">CAROLINA</span>
+        <span class="brand__secondary">CALEGARI</span>
+      </div>
+
+      <a class="pill pill--accent" id="topWhatsapp" href="#" target="_blank" rel="noopener">
+        WhatsApp
+      </a>
+    </header>
+
+    <section class="card" aria-label="Contato">
+      <div class="avatar">
+        <img src="assets/avatar.jpg" alt="Carolina Calegari" />
+      </div>
+
+      <h1 class="title">Contato</h1>
+      <p class="subtitle">
+        Acesse os canais oficiais para agendamento e informações.
+      </p>
+
+      <div class="buttons" id="buttons"></div>
+
+      <footer class="foot">
+        <span class="muted">© <span id="year"></span> Carolina Calegari</span>
+        <a class="muted link" href="https://www.carolinacalegari.com.br" target="_blank" rel="noopener">
+          carolinacalegari.com.br
+        </a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="links.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
