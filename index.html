@@ -7,7 +7,7 @@
   <title>Carolina Calegari | Contato</title>
   <meta name="description" content="Links oficiais: WhatsApp, Instagram e site." />
 
-  <!-- FUNDAMENTAL para funcionar em /contato -->
+  <!-- Blindado para subdomínio e subpasta (ex.: /links/) -->
   <base href="./">
 
   <link rel="icon" href="assets/favicon.png" />
@@ -21,11 +21,21 @@
 
 <body>
   <main class="wrap">
-    <header class="top">
-      <div class="brand">
-        <span class="brand__primary">CAROLINA</span>
-        <span class="brand__secondary">CALEGARI</span>
-      </div>
+    <header class="top" aria-label="Topo">
+      <a class="brand" href="https://www.carolinacalegari.com.br" target="_blank" rel="noopener" aria-label="Abrir site principal">
+        <img
+          src="assets/logo.png"
+          alt="Carolina Calegari"
+          class="brand__logo"
+          loading="eager"
+          decoding="async"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';"
+        />
+        <span class="brand__fallback" style="display:none;">
+          <span class="brand__primary">CAROLINA</span>
+          <span class="brand__secondary">CALEGARI</span>
+        </span>
+      </a>
 
       <a class="pill pill--accent" id="topWhatsapp" href="#" target="_blank" rel="noopener">
         WhatsApp
@@ -34,17 +44,15 @@
 
     <section class="card" aria-label="Contato">
       <div class="avatar">
-        <img src="assets/avatar.jpg" alt="Carolina Calegari" />
+        <img src="assets/avatar.jpg" alt="Carolina Calegari" loading="eager" decoding="async" />
       </div>
 
       <h1 class="title">Contato</h1>
-      <p class="subtitle">
-        Acesse os canais oficiais para agendamento e informações.
-      </p>
+      <p class="subtitle">Acesse os canais oficiais para agendamento e informações.</p>
 
-      <div class="buttons" id="buttons"></div>
+      <div class="buttons" id="buttons" aria-label="Links"></div>
 
-      <footer class="foot">
+      <footer class="foot" aria-label="Rodapé">
         <span class="muted">© <span id="year"></span> Carolina Calegari</span>
         <a class="muted link" href="https://www.carolinacalegari.com.br" target="_blank" rel="noopener">
           carolinacalegari.com.br
