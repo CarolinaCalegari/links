@@ -17,7 +17,7 @@ const LINKS = [
   {
     title: "Avaliações do Google",
     sub: "Ver avaliações e comentários",
-    url: "https://www.google.com.br/search?ibp=gwp;0,7&q=Dra.+Carolina+Calegari+-+Cirurgia+Bucomaxilofacial&ludocid=9079432214454943883&lsig=AB86z5U9knnAB1bVuK4ROpdxYHtO#lkt=LocalPoiReviews&lpg=cid:CgIgAQ%3D%3D"
+    url: "https://www.google.com.br/search?newwindow=1&sca_esv=8f86c1cd49cc125e&sxsrf=ANbL-n5veRiEC98uORZFrTzLgfJOXAmVrg:1767911604813&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOUPqruAmKMD_6LGJQRu25_0q0HIk139rmGRivvnWt1vHX_DpfvPIthia08qpfkA2PQ-kaG5kpw8CX3cvIxYyrdUFAinTjBUEKWz0GWl1-SU1B7BUtVIWYQHxIWotjTNujd1vh9zz0JZ71usDU-2FJWV7Asoc&q=Dra.+Carolina+Calegari+-+Cirurgia+Bucomaxilofacial+Coment%C3%A1rios&sa=X&ved=2ahUKEwjW1cv5__yRAxWgrJUCHZgDImkQ0bkNegQIIxAE&cshid=1767911748315659&biw=2048&bih=962&dpr=2&aic=0"
   }
 ];
 
